@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class NetworkHandler implements Reader{
+public class NetworkHandler implements Reader, Writer{
     public String readData(){
         URL url = null;
         try {
@@ -35,5 +35,10 @@ public class NetworkHandler implements Reader{
         String inputString = inputString1.toString();
 
         return inputString;
+    }
+
+    public void writeData(String str) {
+        MyDatabase database = new MyDatabase();
+        database.write(str);
     }
 }

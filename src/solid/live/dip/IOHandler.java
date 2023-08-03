@@ -4,8 +4,8 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class IOHandler implements Reader{
-    void writeData(String writeData) {
+public class IOHandler implements Reader, Writer{
+    public void writeData(String writeData) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\rutvik.d\\Documents\\Training\\Design pattern\\Solid all five\\Solid all five\\src\\solid\\live\\dip\\afterEncryption.txt"));
             writer.write(writeData);

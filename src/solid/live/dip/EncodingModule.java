@@ -29,8 +29,7 @@ public class EncodingModule {
         NetworkHandler io = new NetworkHandler();
         String inputString = io.readData();
         String encodedString = Base64.encodeBytes(inputString.getBytes());
-        MyDatabase database = new MyDatabase();
-        database.write(encodedString);
+        io.writeData(encodedString);
     }
 }
 
