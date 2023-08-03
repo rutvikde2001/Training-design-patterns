@@ -14,12 +14,12 @@ public class ResourceAllocator {
         int resourceId;
         switch (resourceType) {
             case TIME_SLOT:
-                resourceId = findFreeTimeSlot();
-                markTimeSlotBusy(resourceId);
+                TimeSlot t = new TimeSlot();
+                resourceId = t.allocate();
                 break;
             case SPACE_SLOT:
-                resourceId = findFreeSpaceSlot();
-                markSpaceSlotBusy(resourceId);
+                SpaceSlot s = new SpaceSlot();
+                resourceId = s.allocate();
                 break;
             default:
                 System.out.println("ERROR: Attempted to allocate invalid resource");
@@ -32,10 +32,12 @@ public class ResourceAllocator {
     public void free(ResourceType resourceType, int resourceId) {
         switch (resourceType) {
             case TIME_SLOT:
-                markTimeSlotFree(resourceId);
+                TimeSlot t = new TimeSlot();
+                t.free(resourceId);
                 break;
             case SPACE_SLOT:
-                markSpaceSlotFree(resourceId);
+                SpaceSlot s = new SpaceSlot();
+                s.free(resourceId);
                 break;
 
             default:
@@ -44,23 +46,10 @@ public class ResourceAllocator {
         }
     }
 
-    private void markSpaceSlotFree(int resourceId) {
-    }
 
-    private void markTimeSlotFree(int resourceId) {
-    }
-
-    private void markSpaceSlotBusy(int resourceId) {
-    }
-
-    private int findFreeSpaceSlot() {
-        return 0;
-    }
-
-    private void markTimeSlotBusy(int resourceId) {
-    }
-
-    private int findFreeTimeSlot() {
-        return 0;
-    }
 }
+
+
+
+
+
