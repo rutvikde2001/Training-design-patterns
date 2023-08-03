@@ -8,6 +8,12 @@ package solid.live.ocp;
  * To change this template use File | Settings | File Templates.
  */
 public enum ResourceType {
-    TIME_SLOT,
-    SPACE_SLOT
+    TIME_SLOT(new TimeSlot()),
+    SPACE_SLOT(new SpaceSlot());
+
+    ResourceType(TimeSlot timeSlot) {
+    }
+
+    ResourceType(SpaceSlot spaceSlot) {
+    }
 }
