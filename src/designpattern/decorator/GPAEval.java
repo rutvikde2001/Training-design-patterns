@@ -8,6 +8,7 @@ package  designpattern.decorator;
  * To change this template use File | Settings | File Templates.
  */
 public class GPAEval implements Criteria {
+
     public boolean evaluate(Application theApp) {
         System.out.println("GPAEval called");
         return theApp.getGpa() > 8;
