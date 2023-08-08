@@ -37,7 +37,7 @@ public class Calculator {
     public boolean isDigit(Character c) {
         return c >= 48 && c <= 57;
     }
-
+// isDigit isOperator isEquals
     public boolean isOperator(Character c) {
         return operators.contains(c);
     }

@@ -1,4 +1,4 @@
-package  designpattern.decorator;
+package designpattern.decorator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,6 +15,7 @@ public class TOEFL extends BaseEvaluator {
 
     @Override
     public boolean evaluate(Application theApp) {
+        System.out.println("TOEFLEval called");
         return super.evaluate(theApp) && theApp.getToefl() > 100;
     }
 }

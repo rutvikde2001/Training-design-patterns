@@ -33,6 +33,9 @@ public class Sun {
     public void addSubscriber(Subscriber subscriber){
         subscribers.add(subscriber);
     }
+    public void removeObserver(Subscriber observer) {
+        subscribers.remove(observer);
+    }
 
     public boolean isUp() {
         return isUp;

@@ -12,7 +12,7 @@ import java.io.PrintWriter;
  * Time: 4:55:07 PM
  * To change this template use File | Settings | File Templates.
  */
-public class HelloWorldManipulator {
+public class HelloWorldManipulator{
 
     public void fixManipulate(final String fileName, final String newPath) {
         int cnt = 0;
